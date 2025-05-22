@@ -1,0 +1,52 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+
+
+// 4. Include any default map overrides here
+
+$primary: #F0E9CA;
+$secondary: #723034;
+$success: #008000;
+$info: #19b5fe;
+$warning: #f9c80e;
+$danger: #d91e18;
+$light: #e0e0e2;
+$dark: #723034;
+
+$cordovan: #904E52;
+
+$body-bg:  $secondary;
+$body-color: $primary;
+$link-color: $primary;
+$link-hover-color: #fff;
+$component-active-color: $dark;
+$component-active-bg: $primary;
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+
+$theme-colors: map-merge($theme-colors, (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+));
+
+
+
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/bootstrap";

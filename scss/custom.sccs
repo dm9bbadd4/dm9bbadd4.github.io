@@ -1,4 +1,0 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
-
-$primary: #104547;
-$secondary: #4B5358;
