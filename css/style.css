@@ -66,8 +66,24 @@ body {
 
 /* rtl:end:remove */
 
+
+.glide{
+  padding: 0 1rem;
+}
+
+.cu-front-image{
+  height: 500px; 
+  object-fit: cover;
+}
+
 /* RESPONSIVE CSS
   -------------------------------------------------- */
+@media (max-width: 576px) { 
+  .cu-front-image{
+    height: auto;
+  }
+}
+
 
 @media (min-width: 40em) {
 
@@ -81,10 +97,18 @@ body {
   .featurette-heading {
     font-size: 50px;
   }
+
+  .cu-front-image{
+    height: auto;
+  }
+
 }
 
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
+  }
+  .cu-front-image{
+    height: auto;
   }
 }
