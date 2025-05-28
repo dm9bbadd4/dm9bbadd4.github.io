@@ -18,23 +18,29 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <div class="container">
-                <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> <a href="./index.html"
-                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                        <span class="fs-4">
-                            <h1 class="white">Maeibh Sheehan</h1>
-                        </span> </a>
-                    <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Artist Satement</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-                    </ul>
-                </header>
-            </div>
+    <header class="cu-header mb-4">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-between align-items-center py-3 border-bottom">
+                <!-- d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none -->
+                <div class="title-content">
+                    <h1 class="masked-text">Maeibh Sheehan</h1>
+                    <!-- <div class="marquee">
+                        <div class="marquee_blur" aria-hidden="true">
+                            <p class="marquee_text">Maeibh Sheehan</p>
+                        </div>
+                        <div class="marquee_clear">
+                            <p class="marquee_text">Maeibh Sheehan</p>
+                        </div>
+                    </div> -->
+                </div>
 
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Artist Satement</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </header>
         </div>
     </header>
     <main>
@@ -277,7 +283,7 @@
         crossorigin="anonymous"></script>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script>
-        new Glide('.glide', {
+        var glide = new Glide('.glide', {
             type: "carousel",
             focusAt: "center",
             peek: {
@@ -286,7 +292,18 @@
             },
             autoplay: 2000,
             perView: 3
-        }).mount()
+        })
+
+        const mediaQuery = window.matchMedia('(max-width: 768px)')
+
+        glide.on(['mount.after', 'run'], function () {
+            if (mediaQuery.matches)
+                glide.update({ perView: 1, peek: { before: 50, after: 50 } })
+        })
+
+        glide.mount()
+
+
     </script>
 </body>
 
