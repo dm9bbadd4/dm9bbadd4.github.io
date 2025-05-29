@@ -6,5 +6,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.0"
+  },
+  "scripts": {
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/dm9bbadd4.github.io/"
   }
 }
