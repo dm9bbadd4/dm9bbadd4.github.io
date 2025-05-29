@@ -7,7 +7,18 @@ module.exports = function (eleventyConfig) {
         "node_modules/@glidejs/glide/dist/glide.min.js": "assets/js/glide.min.js"
     });
 
-    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
+        formats: ["webp", "jpeg"],
+        widths: ["auto"],
+        htmlOptions: {
+            imgAttributes: {
+                loading: "lazy",
+                decoding: "async",
+            },
+            pictureAttributes: {}
+        }
+    });
 
 
     return {
