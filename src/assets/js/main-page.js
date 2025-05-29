@@ -9,7 +9,7 @@ var glide = new Glide('.glide', {
             perView: 3
         })
 
-        const mediaQuery = window.matchMedia('(max-width: 768px)')
+        const mediaQuery = window.matchMedia('(max-width: 992px)')
 
         glide.on(['mount.after', 'run'], function () {
             if (mediaQuery.matches)
