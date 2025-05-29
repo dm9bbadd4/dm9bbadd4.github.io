@@ -1,3 +1,4 @@
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/");
     eleventyConfig.addPassthroughCopy({
@@ -5,6 +6,9 @@ module.exports = function (eleventyConfig) {
         "node_modules/@glidejs/glide/dist/css/glide.theme.min.css": "assets/css/glide.theme.min.css",
         "node_modules/@glidejs/glide/dist/glide.min.js": "assets/js/glide.min.js"
     });
+
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+
 
     return {
         dir: {

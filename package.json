@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@11ty/eleventy-img": "^6.0.4",
     "@glidejs/glide": "^3.7.1",
     "bootstrap": "^5.3.3"
   },
