@@ -34,7 +34,13 @@ jobs:
           key: ${{ runner.os }}-eleventy-fetch-cache
 
       - run: npm install
+
+      - name: Fix Eleventy permission
+        run: chmod +x ./node_modules/.bin/eleventy
+        
       - run: npm run build-ghpages
+
+      
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
