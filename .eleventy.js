@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
         "node_modules/@glidejs/glide/dist/css/glide.theme.min.css": "assets/css/glide.theme.min.css",
         "node_modules/@glidejs/glide/dist/glide.min.js": "assets/js/glide.min.js"
     });
+    eleventyConfig.addPassthroughCopy("CNAME");
 
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
