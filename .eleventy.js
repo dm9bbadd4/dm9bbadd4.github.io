@@ -10,14 +10,16 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
         formats: ["webp", "jpeg"],
-        widths: ["auto"],
+        //widths: ["auto"],
         htmlOptions: {
             imgAttributes: {
+                alt: "",
                 loading: "lazy",
                 decoding: "async",
             },
             pictureAttributes: {}
-        }
+        },
+        fallback: "largest",
     });
 
 

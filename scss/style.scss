@@ -99,11 +99,11 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
 
 
 
-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: rgb(var(--bs-tertiary-color-rgb));
-}
+// body {
+//   padding-top: 3rem;
+//   padding-bottom: 3rem;
+//   color: rgb(var(--bs-tertiary-color-rgb));
+// }
 
 
 
@@ -143,7 +143,7 @@ body {
 }
 
 .nav-item > a{
-  box-shadow: 0;
+  box-shadow: none;
   transition: all 0.2s linear;
 }
 
@@ -178,12 +178,39 @@ body {
 }
 
 .cu-front-image{
-  height: 500px; 
+  height: 500px;
   object-fit: cover;
 }
 
 .cu-header, .cu-footer{
   background-color: #723034;
+}
+
+.cu-large-link::first-letter{
+  font-family: "Kumar One", serif;
+  font-size: 1rem;
+}
+
+.cu-animated-shadow:hover{
+  animation: glow 800ms ease-out infinite alternate;
+	outline: none;
+}
+
+@keyframes glow {
+    0% {
+		box-shadow: 0 0 5px rgba(240, 233, 202, 0.2);
+    }	
+    100% {
+		box-shadow: 0 0 20px rgba(240, 233, 202, 0.8);
+    }
+}
+
+.cu-animate-display{
+  transition: all 0.3s linear;
+}
+
+.cu-animate-display:hover{
+  letter-spacing: 0.4rem;
 }
 
 /* RESPONSIVE CSS

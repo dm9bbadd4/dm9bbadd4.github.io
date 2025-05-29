@@ -1,24 +1,20 @@
-<header class="cu-header mb-4">
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-between align-items-center py-3 border-bottom">
-            <div class="title-content">
-                <h1 class="masked-text">Maeibh Sheehan</h1>
-            </div>
-
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a href="/" class="nav-link {{ 'active' if tag == 'home'}}" aria-current="Home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about" class="nav-link {{ 'active' if tag == 'about'}}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link {{ 'active' if tag == 'artistStatement'}}">Artist Satement</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </header>
+<header class="cu-header mb-4 d-flex flex-wrap justify-content-around align-items-center py-3 border-bottom">
+    <div class="title-content">
+        <h1 class="masked-text">Maeibh Sheehan</h1>
     </div>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a href="/" class="nav-link {{ 'active cu-large-link' if tag == 'home'}}" aria-current="Home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="/about" class="nav-link {{ 'active cu-large-link' if tag == 'about'}}">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link {{ 'active cu-large-link' if tag == 'artistStatement'}}">Artist Satement</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+        </li>
+    </ul>
 </header>
