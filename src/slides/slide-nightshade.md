@@ -1,0 +1,3 @@
+---
+image: nightshade-slide.webp
+---
