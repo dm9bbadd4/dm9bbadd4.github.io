@@ -22,6 +22,11 @@ module.exports = function (eleventyConfig) {
         fallback: "largest",
     });
 
+    eleventyConfig.addCollection("pieces", function (collectionsApi) {
+        return collectionsApi.getFilteredByTag("pieces").sort(function (a, b) {
+            return b.order - a.order;
+        });
+    });
 
     return {
         dir: {

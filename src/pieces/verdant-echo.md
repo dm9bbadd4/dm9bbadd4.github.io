@@ -1,6 +1,7 @@
 ---
 title: Verdant Echo
 tags: pieces
+order: 9
 image: verdant-echo.webp
 imageAlt: Verdant Echo
 description: Phytogram digitised prints on glossy photographic paper, unframed

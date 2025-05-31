@@ -1,6 +1,7 @@
 ---
 title: Obscura
 tags: pieces
+order: 5
 image: obscura.webp
 imageAlt: Obscura
 description: Phytogram digitised print on glossy photographic paper, unframed

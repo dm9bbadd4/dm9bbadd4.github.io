@@ -1,6 +1,7 @@
 ---
 title: Untitled
 tags: pieces
+order: 8
 image: untitled.webp
 imageAlt: Untitled
 description: Dry point etching on Hannemuhle paper, Framed
