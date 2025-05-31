@@ -1,0 +1,3 @@
+---
+image: obscura-slide.webp
+---
