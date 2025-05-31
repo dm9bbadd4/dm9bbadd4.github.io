@@ -11,7 +11,7 @@ var glide = new Glide('.glide', {
 
         const mediaQuery = window.matchMedia('(max-width: 992px)')
 
-        glide.on(['mount.after', 'run'], function () {
+        glide.on(['mount.before', 'run'], function () {
             if (mediaQuery.matches)
                 glide.update({ perView: 1, peek: { before: 50, after: 50 } })
         })
