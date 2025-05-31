@@ -1,6 +1,7 @@
 ---
 title: Nightshade II
 tags: pieces
+order: 4
 image: nightshade-ii.webp
 imageAlt: Nightshade II
 description: (3/10) Dry point etching on Hannemuhle paper, framed

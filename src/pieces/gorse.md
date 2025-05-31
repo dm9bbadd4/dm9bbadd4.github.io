@@ -1,6 +1,7 @@
 ---
 title: Gorse
 tags: pieces
+order: 2
 image: gorse.webp
 imageAlt: Gorse
 description: Solar Plate etching on Hannemuhle Paper, unframed
