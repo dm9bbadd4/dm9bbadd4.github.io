@@ -1,8 +1,7 @@
 ---
 title: Polaroid Display
 tags: pieces
-image-thumb: polaroids-thumb.webp
-image:
+image: polaroids.webp
 imageAlt: Untitled Polaroid Display
 description: Polaroid display
 dimensions: 

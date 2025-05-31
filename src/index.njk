@@ -6,12 +6,12 @@ tag: "home"
 ---
 
 <main>
-    <div class="glide mb-2">
+    <div class="glide mb-4">
         <div data-glide-el="track" class="glide__track">
             <ul class="frames__list glide__slides">
                 {%- for slides in collections.slides -%}
                 <li class="glide__slide">
-                    <img src="/assets/images/slides/{{ slides.data.image }}" class="img-fluid w-100 cu-front-image" height="500" alt="">
+                    <img src="/assets/images/slides/{{ slides.data.image }}" class="img-fluid w-100 cu-front-image" height="600" width="551" alt="">
                 </li>
                 {%- endfor -%}
             </ul>
@@ -19,24 +19,26 @@ tag: "home"
     </div>
     <div class="container">
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
             {%- for pieces in collections.pieces -%}
                 <div class="col">
                     <div class="card shadow-sm">
-                        {# <img src="/assets/images/thumbnails/{{ pieces.data['image-thumb'] }}"> #}
+                        <img class="cu-front-thumbs" src="/assets/images/full/{{ pieces.data['image'] }}" alt="{{ pieces.data.imageAlt }}" width="330" height="400">
+                        <div class="cu-image-title">
+
+                        </div>
                         <div class="card-body">
                             <p class="card-text">{{ pieces.data.description }}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-
+                                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
                                 </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
-            {%- endfor %}
+            {%- endfor -%}
         </div>
     </div>
 </main>

@@ -194,6 +194,13 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
 	outline: none;
 }
 
+.cu-front-thumbs{
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
 @keyframes glow {
     0% {
 		box-shadow: 0 0 5px rgba(240, 233, 202, 0.2);
