@@ -25,7 +25,10 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
         <script src="/assets/js/glide.min.js"></script>
-        <script src="/assets/js/main-page.js"></script>
+        {% if tag == 'home' %}
+            <script src="/assets/js/main-page.js"></script>
+        {% endif %}
+
     </body>
 
 </html>
