@@ -6,6 +6,7 @@
  */
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumar+One&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12066,7 +12067,8 @@ textarea.form-control-lg {
      object-fit: cover;
 }
 
-.cu-header, .cu-footer {
+.cu-header,
+.cu-footer {
   background-color: #723034;
 }
 
@@ -12153,4 +12155,58 @@ textarea.form-control-lg {
   .cu-profile-image {
     max-width: 500px;
   }
+}
+.bi {
+  color: #904E52;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+}
+
+.cu-contact-bg {
+  width: 500px;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.25;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.cu-contact-bg-hidden {
+  display: none;
+}
+
+.cu-contact-bg {
+  border-radius: 15%;
+}
+
+.cu-contact-container {
+  border-radius: 15%;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.cu-contact-container:hover {
+  box-shadow: 0 0 0 1px white;
+}
+
+.cu-contact-container:hover .cu-contact-bg {
+  opacity: 0;
+}
+
+.cu-contact-container:hover .cu-contact-bg-hidden {
+  opacity: 0.25;
+}
+
+.cu-image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

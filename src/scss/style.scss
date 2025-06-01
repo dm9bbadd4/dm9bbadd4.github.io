@@ -2,7 +2,7 @@
 // Option B: Include parts of Bootstrap
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
 
@@ -31,8 +31,8 @@ $link-hover-color: #fff;
 $component-active-color: $dark;
 $component-active-bg: $primary;
 
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
 
 
 $theme-colors: map-merge($theme-colors, ("primary": $primary,
@@ -47,7 +47,7 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
 
 
 // 5. Include remainder of required parts
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
@@ -138,12 +138,12 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
   margin-left: .75rem;
 }
 
-.nav-item > a{
+.nav-item>a {
   box-shadow: none;
   transition: all 0.2s linear;
 }
 
-.nav-item > a:hover{
+.nav-item>a:hover {
   border-radius: 6px;
   box-shadow: 0px 0px 0px 1px white;
 }
@@ -170,31 +170,32 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
 /* rtl:end:remove */
 
 
-.glide{
+.glide {
   padding: 0 1rem;
 }
 
-.cu-front-image{
+.cu-front-image {
   height: 600px;
   object-fit: cover;
 }
 
-.cu-header, .cu-footer{
+.cu-header,
+.cu-footer {
   background-color: #723034;
 }
 
-.cu-large-link::first-letter{
+.cu-large-link::first-letter {
   font-family: "Kumar One", serif;
   font-size: 1rem;
 }
 
 
-.cu-animated-shadow:hover{
+.cu-animated-shadow:hover {
   animation: glow 800ms ease-out infinite alternate;
-	outline: none;
+  outline: none;
 }
 
-.cu-front-thumbs{
+.cu-front-thumbs {
   width: 100%;
   height: auto;
   max-height: 400px;
@@ -204,7 +205,7 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
   backface-visibility: hidden;
 }
 
-.cu-image-title{
+.cu-image-title {
   transition: .5s ease;
   width: 90%;
   opacity: 0;
@@ -216,40 +217,41 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
   text-align: center;
 }
 
-.cu-image-container:hover .cu-front-thumbs{
+.cu-image-container:hover .cu-front-thumbs {
   opacity: 0.3;
 }
 
-.cu-image-container:hover .cu-image-title{
+.cu-image-container:hover .cu-image-title {
   opacity: 1;
 }
 
-.cu-image-container:focus .cu-front-thumbs{
+.cu-image-container:focus .cu-front-thumbs {
   opacity: 0.3;
 }
 
-.cu-image-container:focus .cu-image-title{
+.cu-image-container:focus .cu-image-title {
   opacity: 1;
 }
 
 @keyframes glow {
-    0% {
-		box-shadow: 0 0 5px rgba(240, 233, 202, 0.2);
-    }	
-    100% {
-		box-shadow: 0 0 20px rgba(240, 233, 202, 0.8);
-    }
+  0% {
+    box-shadow: 0 0 5px rgba(240, 233, 202, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 20px rgba(240, 233, 202, 0.8);
+  }
 }
 
-.cu-animate-display{
+.cu-animate-display {
   transition: all 0.5s ease-in-out;
 }
 
-.cu-animate-display:hover{
+.cu-animate-display:hover {
   letter-spacing: 0.4rem;
 }
 
-.cu-profile-image{
+.cu-profile-image {
   width: auto;
   height: auto;
   max-width: 250px;
@@ -257,18 +259,83 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
 
 
 
-@include media-breakpoint-up(md) { 
-  .masked-text{
+@include media-breakpoint-up(md) {
+  .masked-text {
     font-size: 3.5rem;
   }
-  .cu-profile-image{
+
+  .cu-profile-image {
     max-width: 350px;
   }
 
 }
 
-@include media-breakpoint-up(xl) { 
-  .cu-profile-image{
+@include media-breakpoint-up(xl) {
+  .cu-profile-image {
     max-width: 500px;
   }
+}
+
+
+// Update the import directory to point to it‘s location within node_modules
+//$bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
+
+// Import the Sass files as usual
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+.bi {
+  color: $cordovan;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: .75rem;
+}
+
+.cu-contact-bg {
+  width: 500px;
+  height: 30vh;
+  object-fit: cover;
+  opacity: 0.25;
+  transition: 0.5s ease;
+
+  backface-visibility: hidden;
+}
+
+.cu-contact-bg-hidden{
+  display: none;
+}
+
+.cu-contact-bg {
+  border-radius: 15%;
+}
+
+.cu-contact-container {
+  border-radius: 15%;
+  position: relative;
+  transition: 0.5s ease;
+
+}
+
+.cu-contact-container:hover {
+  box-shadow: 0 0 0 1px white;
+}
+
+.cu-contact-container:hover .cu-contact-bg {
+  opacity: 0;
+}
+
+.cu-contact-container:hover .cu-contact-bg-hidden {
+  opacity: 0.25;
+}
+
+
+.cu-image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
