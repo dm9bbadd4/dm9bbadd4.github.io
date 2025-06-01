@@ -304,7 +304,7 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
 }
 
 .cu-contact-bg-hidden{
-  display: none;
+  opacity: 0;
 }
 
 .cu-contact-bg {
@@ -331,7 +331,7 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
 }
 
 
-.cu-image-overlay {
+.cu-image-overlay, .cu-contact-bg-hidden{
   position: absolute;
   top: 50%;
   left: 50%;
