@@ -12093,16 +12093,19 @@ textarea.form-control-lg {
   backface-visibility: hidden;
 }
 
-.cu-image-title {
+.cu-image-title, .cu-hero-text {
   transition: 0.5s ease;
   width: 90%;
-  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.cu-image-title {
+  opacity: 0;
 }
 
 .cu-image-container:hover .cu-front-thumbs {
@@ -12181,11 +12184,11 @@ textarea.form-control-lg {
 }
 
 .cu-contact-bg {
-  border-radius: 15%;
+  border-radius: 20%;
 }
 
 .cu-contact-container {
-  border-radius: 15%;
+  border-radius: 20%;
   position: relative;
   transition: 0.5s ease;
 }
@@ -12209,4 +12212,27 @@ textarea.form-control-lg {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.cu-hero-container {
+  position: relative;
+}
+
+.cu-hero {
+  height: 800px;
+  max-width: 100%;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cu-hero-text {
+  border-radius: 1%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cu-hero-text {
+  width: 50%;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */
