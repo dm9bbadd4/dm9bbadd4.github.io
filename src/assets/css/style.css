@@ -12093,7 +12093,7 @@ textarea.form-control-lg {
   backface-visibility: hidden;
 }
 
-.cu-image-title, .cu-hero-text {
+.cu-image-title {
   transition: 0.5s ease;
   width: 90%;
   position: absolute;
@@ -12205,7 +12205,8 @@ textarea.form-control-lg {
   opacity: 0.25;
 }
 
-.cu-image-overlay, .cu-contact-bg-hidden {
+.cu-image-overlay,
+.cu-contact-bg-hidden {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -12215,24 +12216,14 @@ textarea.form-control-lg {
 }
 
 .cu-hero-container {
-  position: relative;
-}
-
-.cu-hero {
-  height: 800px;
-  max-width: 100%;
-  -o-object-position: 50% 0%;
-     object-position: 50% 0%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-image: url("/assets/images/full/komorebi.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cu-hero-text {
-  border-radius: 1%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.cu-hero-text {
-  width: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: left;
 }/*# sourceMappingURL=style.css.map */

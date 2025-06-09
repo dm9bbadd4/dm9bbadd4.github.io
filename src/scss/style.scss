@@ -205,7 +205,7 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
   backface-visibility: hidden;
 }
 
-.cu-image-title, .cu-hero-text {
+.cu-image-title {
   transition: .5s ease;
   width: 90%;
   position: absolute;
@@ -216,7 +216,7 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
   text-align: center;
 }
 
-.cu-image-title{
+.cu-image-title {
   opacity: 0;
 }
 
@@ -306,7 +306,7 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
   backface-visibility: hidden;
 }
 
-.cu-contact-bg-hidden{
+.cu-contact-bg-hidden {
   opacity: 0;
 }
 
@@ -334,7 +334,8 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
 }
 
 
-.cu-image-overlay, .cu-contact-bg-hidden{
+.cu-image-overlay,
+.cu-contact-bg-hidden {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -343,23 +344,18 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
   text-align: center;
 }
 
+
 .cu-hero-container {
-  position: relative;
+  background-image: url("/assets/images/full/komorebi.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.cu-hero{
-  height: 800px;
-  max-width: 100%;
-  object-position: 50% 0%;
-  object-fit: cover;
-}
-
-.cu-hero-text{
-  border-radius: 1%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
 
 .cu-hero-text {
-  width: 50%;
+  //width: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: left;
 }
