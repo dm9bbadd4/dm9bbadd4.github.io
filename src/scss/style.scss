@@ -58,18 +58,19 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
   font-weight: bold;
   margin-bottom: 0;
   font-family: "Kumar One", serif;
-  color: transparent;
+  color: antiquewhite;
   line-height: normal;
   letter-spacing: 0.2rem;
   //background: #fffcd9;
-  background: linear-gradient(300deg, #F0E9CA, #ffe174);
-  background-size: 180% 180%;
+  //background: linear-gradient(300deg, #F0E9CA, #ffe174);
+  //background-size: 180% 180%;
   /* Enlarged for smooth animation */
-  background-position: 0 50%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate-background 20s infinite ease;
+  
+  // background-position: 0 50%;
+  // background-clip: text;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // animation: animate-background 20s infinite ease;
 }
 
 @keyframes animate-background {
@@ -175,8 +176,13 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
 }
 
 .cu-front-image {
-  height: 600px;
   object-fit: cover;
+}
+
+.cu-front-image-container{
+  max-width: 100%;
+  overflow: hidden;
+  height: 600px;
 }
 
 .cu-header,
@@ -271,7 +277,10 @@ $theme-colors: map-merge($theme-colors, ("primary": $primary,
     max-width: 350px;
   }
 
+  
+
 }
+
 
 @include media-breakpoint-up(xl) {
   .cu-profile-image {

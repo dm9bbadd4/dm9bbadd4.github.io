@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
         formats: ["webp", "jpeg"],
-        widths: [330, 551, 1920, "auto"],
+        widths: [330, 551, 1500, 1920, "auto"],
         heights: ["auto"],
         htmlOptions: {
             imgAttributes: {
