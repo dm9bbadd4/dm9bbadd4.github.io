@@ -74,7 +74,7 @@
                     <a href="/contact" class="nav-link">Contact</a>
                 </li>
             </ul>
-            <p class="text-center text-body-secondary">© 2024 Maeibh Sheehan</p>
+            <p class="text-center text-body-secondary" id="copyright"></p>
         </footer>
     </div>
 </footer>
@@ -82,7 +82,8 @@
         <script src="/assets/js/glide.min.js"></script>
         
         <script>
-            console.log(document.documentElement.clientWidth);
+            // Set current year in footer copyright
+            document.getElementById("copyright").innerHTML = `&copy; ${new Date().getFullYear()} Maeibh Sheehan`;
         </script>
 
     </body>
